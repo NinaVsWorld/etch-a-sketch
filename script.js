@@ -2,7 +2,7 @@ function createGrid(squaresPerSide) {
     const container = document.querySelector(".container");
     const containerWidth = document.querySelector(".container").offsetWidth;
     // For width of each square, get container width / squaresPerSide
-    const squareWidth = Math.round(containerWidth / squaresPerSide);
+    const squareWidth = containerWidth / squaresPerSide;
 
     for (let i = 0; i < squaresPerSide; i++) {
         for (let j = 0; j < squaresPerSide; j++) {
@@ -18,4 +18,4 @@ function createGrid(squaresPerSide) {
     });
 }
 
-createGrid(20);
+createGrid(10);
