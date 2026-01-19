@@ -11,4 +11,12 @@ body {
     background-color: aquamarine;
     width: 640px;
     height: 640px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    border: black solid thin;
+    background-color: white;
+    box-sizing: border-box;
 }
