@@ -2,11 +2,13 @@ body {
     height: 100vh;
     margin: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     background-color: #EEF2F7;
 }
 
 .container {
     background-color: aquamarine;
+    width: 640px;
+    height: 640px;
 }
