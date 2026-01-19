@@ -1,0 +1,12 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEF2F7;
+}
+
+.container {
+    background-color: aquamarine;
+}
