@@ -28,7 +28,7 @@ function resetGrid() {
     })
 }
 
-// Set default grid size
+// Set default grid size upon every browser reload
 createGrid(DEFAULTGRIDSIZE);
 
 // Set up event listener to get squares per side
@@ -45,6 +45,5 @@ submit.addEventListener("click", () => {
     } else {
         resetGrid();
         createGrid(number);
-        console.log(number);
     }
 })
