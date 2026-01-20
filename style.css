@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-    background-color: aquamarine;
+    background-color: white;
     width: 640px;
     height: 640px;
     display: flex;
@@ -19,4 +19,9 @@ body {
     border: #ddd solid 0.5px;
     background-color: white;
     box-sizing: border-box;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
 }

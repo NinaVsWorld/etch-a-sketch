@@ -1,4 +1,3 @@
-// Default grid size upon opening browser
 const DEFAULTGRIDSIZE = 10;
 
 function createGrid(squaresPerSide) {
@@ -32,8 +31,7 @@ function resetGrid() {
 createGrid(DEFAULTGRIDSIZE);
 
 // Set up event listener to get squares per side
-const submit = document.querySelector(".submit");
-submit.addEventListener("click", () => {
+document.querySelector(".submit").addEventListener("click", () => {
     const inputValue = document.querySelector("input").value;
     const errorMsg = document.querySelector(".error-msg");
     const number = Number(inputValue);
@@ -45,5 +43,6 @@ submit.addEventListener("click", () => {
     } else {
         resetGrid();
         createGrid(number);
+        errorMsg.textContent = "";
     }
 })
