@@ -108,6 +108,10 @@ function getRandomHexColour() {
 
 let rainbowModeOn = false;
 document.querySelector(".rainbow-pen").addEventListener("click", () => {
-    colourInput.value = getRandomHexColour();
+    //colourInput.value = getRandomHexColour();
     rainbowModeOn = true;
+})
+
+document.querySelector(".rainbow-pen").addEventListener("dblclick", () => {
+    rainbowModeOn = false;
 })
