@@ -46,3 +46,33 @@ document.querySelector(".submit").addEventListener("click", () => {
         errorMsg.textContent = "";
     }
 })
+
+// trying something
+let dragging = false
+document.querySelector(".container").addEventListener("mousedown", (event) => {
+    dragging = true;
+    event.target.style.backgroundColor = "black";
+})
+
+document.querySelector(".container").addEventListener("mouseup", () => {
+    dragging = false;
+})
+
+document.querySelector(".container").addEventListener("mousemove", (event) => {
+    if (dragging) {
+    event.target.style.backgroundColor = "black";
+    }
+})
+
+/*document.querySelector(".container").addEventListener("mouseup", (event) => {
+    dragging = false;
+})
+
+const squares = document.querySelectorAll(".square");
+for (const square of squares) {
+    square.addEventListener("mouseover", () => {
+        if (dragging) {
+            square.style.backgroundColor = "black";
+        }
+    })
+}*/
