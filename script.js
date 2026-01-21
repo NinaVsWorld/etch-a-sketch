@@ -50,6 +50,9 @@ document.querySelector(".submit").addEventListener("click", () => {
 // Eraser
 const isEraserOn = document.querySelector("#eraser");
 
+// Rainbow pen
+const isRainbowOn = document.querySelector("#rainbow-pen");
+
 // Click and hold down to draw
 let dragging = false
 let colourInput = document.querySelector("#pen-colour");
@@ -59,12 +62,10 @@ document.querySelector(".container").addEventListener("mousedown", (event) => {
         event.target.style.backgroundColor = "#FFFFFF";
         return;
     } 
-    
-    if (rainbowModeOn) {
+    if (isRainbowOn.checked/*rainbowModeOn*/) {
         event.target.style.backgroundColor = getRandomHexColour();
         return;
     }
-    
     event.target.style.backgroundColor = colourInput.value;
 })
 
@@ -79,12 +80,10 @@ document.querySelector(".container").addEventListener("mouseover", (event) => {
             event.target.style.backgroundColor = "#FFFFFF";
             return;
         }
-
-        if (rainbowModeOn) {
+        if (isRainbowOn.checked/*rainbowModeOn*/) {
             event.target.style.backgroundColor = getRandomHexColour();
             return;
         }
-        
         event.target.style.backgroundColor = colourInput.value;
     }
 })
@@ -102,12 +101,3 @@ function getRandomHexColour() {
     let colour = Math.floor(Math.random() * 16777215).toString(16);
     return "#" + colour.padStart(6, '0');
 }
-
-let rainbowModeOn = false;
-document.querySelector(".rainbow-pen").addEventListener("click", () => {
-    rainbowModeOn = true;
-})
-
-document.querySelector(".rainbow-pen").addEventListener("dblclick", () => {
-    rainbowModeOn = false;
-})
