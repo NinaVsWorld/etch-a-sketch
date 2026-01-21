@@ -50,9 +50,6 @@ document.querySelector(".submit").addEventListener("click", () => {
 // Eraser
 const isEraserOn = document.querySelector("#eraser");
 
-// Rainbow pen
-//const isRainbowOn = document.querySelector("#rainbow-pen");
-
 // Click and hold down to draw
 let dragging = false
 let colourInput = document.querySelector("#pen-colour");
@@ -108,7 +105,6 @@ function getRandomHexColour() {
 
 let rainbowModeOn = false;
 document.querySelector(".rainbow-pen").addEventListener("click", () => {
-    //colourInput.value = getRandomHexColour();
     rainbowModeOn = true;
 })
 
