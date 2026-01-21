@@ -47,7 +47,7 @@ document.querySelector(".submit").addEventListener("click", () => {
     }
 })
 
-// trying something
+// Click and hold down to draw
 let dragging = false
 document.querySelector(".container").addEventListener("mousedown", (event) => {
     dragging = true;
@@ -60,19 +60,14 @@ document.querySelector(".container").addEventListener("mouseup", () => {
 
 document.querySelector(".container").addEventListener("mousemove", (event) => {
     if (dragging) {
-    event.target.style.backgroundColor = "black";
+        event.target.style.backgroundColor = "black";
     }
 })
 
-/*document.querySelector(".container").addEventListener("mouseup", (event) => {
-    dragging = false;
-})
-
-const squares = document.querySelectorAll(".square");
-for (const square of squares) {
-    square.addEventListener("mouseover", () => {
-        if (dragging) {
-            square.style.backgroundColor = "black";
-        }
-    })
-}*/
+// Clear grid - change bgcolor to white
+document.querySelector(".clear-grid").addEventListener("click", () => {
+    const squares = document.querySelectorAll(".square");
+    for (const square of squares) {
+        square.style.backgroundColor = "white";
+    }
+});
