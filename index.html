@@ -5,33 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/cooper-black" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Patrick+Hand&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="controls">
-        <div class="input">
-            <label for="squares-per-side">Squares Per Side (limit: 100)</label>
-            <input type="number" min="1" max="100">
-            <button class="submit" type="button">Submit</button>
-            <p class="error-msg"></p>
+    <h1>Etch-a-Sketch</h1>
+    <div class="sketch-pad">
+        <div class="controls">
+            <div class="input">
+                <label for="squares-per-side">Squares Per Side (limit: 100)</label>
+                <input type="number" min="1" max="100">
+                <button class="submit" type="button">Submit</button>
+                <p class="error-msg"></p>
+            </div>
+            <div class="colour-picker">
+                <label for="pen-colour">Pick a colour</label>
+                <input type="color" id="pen-colour" value="#000000">
+            </div>
+            <button class="clear-grid" type="button">Clear grid</button>
+            <label class="switch"> Eraser
+                <input type="checkbox" id="eraser">
+                <span class="slider round"></span>
+            </label>
+            <label class="switch"> Rainbow
+                <input type="checkbox" id="rainbow-pen">
+                <span class="slider round"></span>
+            </label>
         </div>
-        <div class="colour-picker">
-            <label for="pen-colour">Pick a colour</label>
-            <input type="color" id="pen-colour" value="#000000">
+        <div class="sketch-pad-frame">
+            <div class="outer">
+                <div class="container"></div>
+            </div>
         </div>
-        <button class="clear-grid" type="button">Clear grid</button>
-        <label class="switch"> Eraser
-            <input type="checkbox" id="eraser">
-            <span class="slider round"></span>
-        </label>
-        <label class="switch"> Rainbow
-            <input type="checkbox" id="rainbow-pen">
-            <span class="slider round"></span>
-        </label>
-    </div>
-    <div>
-        <h1>Etch-a-Sketch</h1>
-        <div class="container"></div>
     </div>
 </body>
 </html>

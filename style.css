@@ -1,10 +1,24 @@
+@import url('https://fonts.cdnfonts.com/css/cooper-black');
+
 body {
     height: 100vh;
     margin: 0;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: #EEF2F7;
+    background-color: #F6F1E7;
+    font-family: 'Cooper Black', sans-serif;
+                                                
+}
+
+.sketch-pad {
+    display: flex;
+    align-items: center;
+}
+
+.outer, .sketch-pad-frame {
+    border: 2px solid #D8C4A3;
 }
 
 .container {
@@ -21,7 +35,16 @@ body {
     box-sizing: border-box;
 }
 
+.sketch-pad-frame {
+    padding: 30px;
+    background-color: #EAD7B7;
+    border-radius: 20px;
+    box-shadow: 10px 10px #CFC7BC;
+}
+
 .controls {
     display: flex;
     flex-direction: column;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
 }

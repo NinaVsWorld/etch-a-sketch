@@ -92,11 +92,11 @@ document.querySelector(".container").addEventListener("mouseover", (event) => {
 document.querySelector(".clear-grid").addEventListener("click", () => {
     const squares = document.querySelectorAll(".square");
     for (const square of squares) {
-        square.style.backgroundColor = "white";
+        square.style.backgroundColor = "#FFFFFF";
     }
 });
 
-// Rainbow pen
+// Rainbow pen colours
 function getRandomHexColour() {
     let colour = Math.floor(Math.random() * 16777215).toString(16);
     return "#" + colour.padStart(6, '0');
