@@ -25,3 +25,10 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+#pen-colour {
+    background-image: url("drawing.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

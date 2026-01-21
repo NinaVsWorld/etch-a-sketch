@@ -47,21 +47,44 @@ document.querySelector(".submit").addEventListener("click", () => {
     }
 })
 
+// Eraser
+const isEraserOn = document.querySelector("#toggle");
+
 // Click and hold down to draw
 let dragging = false
+let colourInput = document.querySelector("#pen-colour");
 document.querySelector(".container").addEventListener("mousedown", (event) => {
     dragging = true;
-    event.target.style.backgroundColor = "black";
+    if (isEraserOn.checked) {
+        event.target.style.backgroundColor = "#FFFFFF";
+    } else {
+        event.target.style.backgroundColor = colourInput.value;
+    }
 })
 
 document.querySelector(".container").addEventListener("mouseup", () => {
     dragging = false;
 })
 
-document.querySelector(".container").addEventListener("mousemove", (event) => {
+let hoveredOnce = false;
+document.querySelector(".container").addEventListener("mouseover", (event) => {
     if (dragging) {
-        event.target.style.backgroundColor = "black";
+        if (isEraserOn.checked) {
+            event.target.style.backgroundColor = "#FFFFFF";
+        } else {
+            event.target.style.backgroundColor = colourInput.value;
+        }
+        //hoveredOnce = true;
+        //if (hoveredOnce) {
+            //if (rainbowModeOn) {
+                //colourInput.value = getRandomHexColour();
+                //event.target.style.backgroundColor = colourInput.value;
+            //} else {
+                //event.target.style.backgroundColor = colourInput.value;
+            //}
+        //}
     }
+    //hoveredOnce = false;
 })
 
 // Clear grid - change bgcolor to white
@@ -71,3 +94,15 @@ document.querySelector(".clear-grid").addEventListener("click", () => {
         square.style.backgroundColor = "white";
     }
 });
+
+// Rainbow pen
+/*function getRandomHexColour() {
+    let colour = Math.floor(Math.random() * 16777215).toString(16);
+    return "#" + colour.padStart(6, '0');
+}
+
+let rainbowModeOn = false;
+document.querySelector(".rainbow-pen").addEventListener("click", () => {
+    colourInput.value = getRandomHexColour();
+    rainbowModeOn = true;
+})*/
