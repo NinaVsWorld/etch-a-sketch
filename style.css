@@ -3,18 +3,20 @@
 body {
     height: 100vh;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: #F6F1E7;
     font-family: 'Cooper Black', sans-serif;
                                                 
 }
 
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
 .sketch-pad {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .outer, .sketch-pad-frame {
