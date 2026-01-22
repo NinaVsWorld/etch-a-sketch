@@ -38,7 +38,6 @@ document.querySelector(".submit").addEventListener("click", () => {
     if (number >= 1 && number <= 100) {
         resetGrid();
         createGrid(number);
-        errorMsg.textContent = "";
     }
 })
 
