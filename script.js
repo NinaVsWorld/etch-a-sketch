@@ -38,9 +38,7 @@ document.querySelector(".submit").addEventListener("click", () => {
 
     if (!Number.isInteger(number)) {
         errorMsg.textContent = "Please input whole numbers only!";
-    } else if (number < 1 || number > 100) {
-        errorMsg.textContent = "Please provide a number within the specified range!";
-    } else {
+    } else if (number >= 1 && number <= 100) {
         resetGrid();
         createGrid(number);
         errorMsg.textContent = "";
