@@ -11,6 +11,9 @@ body {
 h1 {
     display: flex;
     justify-content: center;
+    color: #3A2D28;
+    font-size: 40px;
+    text-shadow: 2px 2px 2px #CFC7BC;
 }
 
 .sketch-pad {
@@ -52,6 +55,7 @@ h1 {
     flex-direction: column;
     font-family: "Nunito", sans-serif;
     font-weight: 700;
+    color: #3A2D28;
     background-color: #F6F1E7;
     padding: 20px;
     border: #C94A2D solid 2px;
@@ -133,4 +137,22 @@ input[type="number"] {
 input[type="color"] {
     box-sizing: border-box;
     padding: 4.6px;
+}
+
+.check-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.check {
+    display: flex;
+    gap: 5px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #C94A2D
 }
