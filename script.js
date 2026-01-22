@@ -33,12 +33,9 @@ createGrid(DEFAULTGRIDSIZE);
 // Set up event listener to get squares per side
 document.querySelector(".submit").addEventListener("click", () => {
     const inputValue = document.querySelector("input").value;
-    const errorMsg = document.querySelector(".error-msg");
     const number = Number(inputValue);
 
-    if (!Number.isInteger(number)) {
-        errorMsg.textContent = "Please input whole numbers only!";
-    } else if (number >= 1 && number <= 100) {
+    if (number >= 1 && number <= 100) {
         resetGrid();
         createGrid(number);
         errorMsg.textContent = "";
@@ -71,7 +68,6 @@ document.querySelector(".container").addEventListener("mouseup", () => {
     dragging = false;
 })
 
-let hoveredOnce = false;
 document.querySelector(".container").addEventListener("mouseover", (event) => {
     if (dragging) {
         if (isEraserOn.checked) {
