@@ -1,7 +1,7 @@
 # Etch-a-Sketch
 A browser version of the classic Etch-a-Sketch toy that I made while going through The Odin Project's Foundation course. Users choose the grid size (between 1 and 100, inclusive), can choose the pen colour via the colour picker, or the rainbow pen mode, and there is also an eraser. There is also the option to clear the grid, which preserves the user's chosen grid size but creates a blank slate.
 
-Try it out here: 
+Try it out here: https://ninavsworld.github.io/etch-a-sketch/
 
 ![Image of Etch-a-Sketch](etch-a-sketch.png)
 
