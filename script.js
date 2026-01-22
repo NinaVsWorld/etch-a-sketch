@@ -62,7 +62,7 @@ document.querySelector(".container").addEventListener("mousedown", (event) => {
         event.target.style.backgroundColor = "#FFFFFF";
         return;
     } 
-    if (isRainbowOn.checked/*rainbowModeOn*/) {
+    if (isRainbowOn.checked) {
         event.target.style.backgroundColor = getRandomHexColour();
         return;
     }
@@ -80,7 +80,7 @@ document.querySelector(".container").addEventListener("mouseover", (event) => {
             event.target.style.backgroundColor = "#FFFFFF";
             return;
         }
-        if (isRainbowOn.checked/*rainbowModeOn*/) {
+        if (isRainbowOn.checked) {
             event.target.style.backgroundColor = getRandomHexColour();
             return;
         }

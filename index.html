@@ -14,26 +14,28 @@
 <body>
     <h1>Etch-a-Sketch</h1>
     <div class="sketch-pad">
-        <div class="controls">
-            <div class="input">
-                <label for="squares-per-side">Squares Per Side (limit: 100)</label>
-                <input type="number" min="1" max="100">
-                <button class="submit" type="button">Submit</button>
-                <p class="error-msg"></p>
+        <div class="controls-frame">
+            <div class="controls">
+                <div class="input">
+                    <label class="squares-per-side" for="squares-per-side">Squares Per Side (limit: 100)</label>
+                    <input class="number" type="number" min="1" max="100">
+                    <button class="submit" type="button">Submit</button>
+                    <p class="error-msg"></p>
+                </div>
+                <div class="colour-picker">
+                    <label for="pen-colour">Pick a colour</label>
+                    <input type="color" id="pen-colour" value="#000000">
+                </div>
+                <button class="clear-grid" type="button">Clear grid</button>
+                <label class="switch"> Eraser
+                    <input type="checkbox" id="eraser">
+                    <span class="slider round"></span>
+                </label>
+                <label class="switch"> Rainbow
+                    <input type="checkbox" id="rainbow-pen">
+                    <span class="slider round"></span>
+                </label>
             </div>
-            <div class="colour-picker">
-                <label for="pen-colour">Pick a colour</label>
-                <input type="color" id="pen-colour" value="#000000">
-            </div>
-            <button class="clear-grid" type="button">Clear grid</button>
-            <label class="switch"> Eraser
-                <input type="checkbox" id="eraser">
-                <span class="slider round"></span>
-            </label>
-            <label class="switch"> Rainbow
-                <input type="checkbox" id="rainbow-pen">
-                <span class="slider round"></span>
-            </label>
         </div>
         <div class="sketch-pad-frame">
             <div class="outer">
