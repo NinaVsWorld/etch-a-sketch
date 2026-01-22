@@ -130,13 +130,14 @@ input[type="number"] {
     gap: 10px;
 }
 
-#pen-colour {
-    height: 32px;
+.box, .set-grid {
+    display: flex;
+    gap: 5px;
 }
 
-input[type="color"] {
-    box-sizing: border-box;
-    padding: 4.6px;
+#pen-colour {
+    height: 32px;
+    width: 88px;
 }
 
 .check-boxes {
