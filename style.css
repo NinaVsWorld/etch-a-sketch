@@ -55,6 +55,7 @@ h1 {
     background-color: #F6F1E7;
     padding: 20px;
     border: #C94A2D solid 2px;
+    gap: 25px;
 }
 
 .controls-frame {
@@ -71,7 +72,7 @@ h1 {
     font-size: 18px;
 }
 
-.submit /* and maybe other buttons too */ {
+.submit, .clear-grid /* and maybe other buttons too */ {
     background-color: #E4572E;
     color: white;
     border: #C94A2D solid 2px;
@@ -81,10 +82,10 @@ h1 {
     font-weight: 700;
 }
 
-.number {
+.number, #pen-colour {
     border: #C9B8A1 solid 2px;
     border-radius: 7.5px;
-    width: 75px;
+    width: 80px;
     height: 26px;
 }
 
@@ -116,4 +117,20 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
+}
+
+.colour-picker {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    gap: 10px;
+}
+
+#pen-colour {
+    height: 32px;
+}
+
+input[type="color"] {
+    box-sizing: border-box;
+    padding: 4.6px;
 }
